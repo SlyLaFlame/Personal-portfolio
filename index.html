@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/f50a959063.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/fire.jpg" class="logo" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> Certified Web Developer</p>
+                <p> Information Systems Guru</p>
+                <h1>Hi, i'm <span>Shem Aberi </span> <br> from Nairobi, Kenya 
+                    </h1>
+            </div>
+        </div>
+    </div>
+  <!------about------>
+  <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/AboutMe.png" alt="About Me">
+                </div>
+                <div class="about-col-2">
+                    <h2 class="sub-title">About Me</h2>
+                    <p>I am a passionate web designer with a love for creating beautiful and functional websites. 
+                       I also have a deep interest in chess, both as a player and a coach.</p>
+                       <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Design</span> <br> Building clean and responsive websites</li>
+                                <li><span>HTML/CSS/Javascript</span> <br> Proficient in HTML5 and CSS3</li>
+                                <li><span>UI/UX Design</span> <br> Creating user-friendly interfaces</li>
+                                <li><span>Online presence for businesses</span> <br> Ensuring businesses that are starting out get the ultimate online presence</li>
+                                <li><span>Blogging</span> <br> Ensuring SEO in web pages</li>
+                                <li><span>Communication and Problem Solving</span> <br> Excellent communication and problem solving skills</li>
+                                <li><span>Chess Instructor</span> <br>Chess coaching sessions</li>
+                            </ul>
+                        </div>
+                         <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2024 - Current</span> <br> Consistently learning about tech and keeping up with the ever-evolving world of AI</li>
+                                <li><span>2021 - 2023</span> <br> Managed chess tournament systems for Kenyan Universities, Nairobi region</li>
+                                <li><span>2022 - 2023</span> <br>Freelance IT projects</li>
+                            </ul>
+                        </div>
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2019-2023</span> <br> BSc IT Kenyatta University</li>
+                                <li><span>2015-2018</span> <br> Alliance High School</li>
+                                <li><span>2007-2014</span> <br> Ekerubo CCF Primary School</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I create impressive and responsive websites tailored to your needs.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-chess-board"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>I build succesful products that are not only asthetically pleasing but also useful, usable, and enjoyable</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrows-to-circle"></i>
+                    <h2>Content Creation</h2>
+                    <p>I produce engaging content for blogs and social media.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------portfolio------- -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/ChessFlame.png" alt="Work Item 1">
+                    <div class="layer">
+                        <h3>Web Design Project</h3>
+                        <p>A responsive chess tournament management website I designed for a local business.</p>
+                        <a href ="https://github.com/SlyLaFlame/Take_Take"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/HomePage Admin.png" alt="Work Item 2">
+                    <div class="layer">
+                        <h3>UI/UX Design </h3>
+                        <p>Created an aesthetically pleasing and usable product</p>
+                        <a href ="https://github.com/SlyLaFlame/Take_Take"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/white.jpg" alt="Work Item 3">
+                    <div class="layer">
+                        <h3>Blogging</h3>
+                        <p>Writing articles online for SEO-first companies</p>
+                        <a href ="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/SlyLaFlame" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- --------contact------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>nyangateshem22@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i>Phone: +254 791692009</p>
+                    <div class="social-icons">
+                        <a href="https://x.com/sirbery"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.instagram.com/laflame_aberi?igsh=a3RhaXRxOGt6OHc2"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/nyangate-shem-b94735374/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="Images/Shem_Aberi_CV_2025.pdf" download="Shem_Aberi_CV_2025.pdf" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name= "Email" placeholder="Your Email" required>
+                        <textarea name= "Message" rows= "6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+                
+            </div>
+        </div>
+        <a href="#header" class="back-to-top" title="Back to Top">
+  <i class="fa-solid fa-arrow-up"></i>
+</a>
+        <div class="copyright">
+            <p>&copy; 2025 Shem Aberi. All rights reserved.</p>
+            <p>Designed by Aberi.</p>
+        </div>
+    </div>
+  <script>
+window.addEventListener('scroll', function() {
+  const btn = document.querySelector('.back-to-top');
+  if (window.scrollY > 2000) {
+    btn.classList.add('show');
+  } else {
+    btn.classList.remove('show');
+  }
+});
+</script>  
+<script>
+    var tablinks = document.getElementsByClassName ("tab-links");
+    var tabcontents = document.getElementsByClassName ("tab-contents");
+    function opentab (tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+  // Select all nav links inside the sidebar
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function() {
+      // Hide the sidebar menu on mobile
+      if(window.innerWidth <= 600){
+        document.querySelector('nav ul').style.right = '-200px';
+      }
+    });
+  });
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbycCnvKLYBlXgTlcRmoK4gb2uoVFN_eBQ5mrj0FT8gQcL9aZr_c6szcfadTFxrQhwcYlw/exec'
+  const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully!";
+        setTimeout(function() {
+            msg.innerHTML = "";
+        }, 5000);
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+ 
+</body>
+</html>
