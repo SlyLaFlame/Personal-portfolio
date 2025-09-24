@@ -26,5 +26,9 @@ HTML5
 - Email: [nyangateshem22@gmail.com]
 - LinkedIn: [https://www.linkedin.com/in/nyangate-shem-b94735374 ]
 - Portfolio Website: [yourwebsite.com]
+
+
 Available for Internship/Hire
+
+
 Thank you for visiting my portfolio!
