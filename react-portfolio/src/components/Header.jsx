@@ -37,12 +37,18 @@ const Header = ({ activeSection, scrollToSection }) => {
         <motion.img
           src="/IT guru.png"
           alt="logo"
-          className="w-32 h-16 bg-black rounded-lg cursor-pointer"
+          className="w-32 h-16 bg-black rounded-lg cursor-pointer relative z-20"
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
         />
 
-        <ul className={`md:flex md:items-center md:static absolute bg-black md:bg-transparent w-full md:w-auto left-0 md:left-auto transition-all duration-300 ease-in ${menuOpen ? 'top-16' : 'top-[-400px]'} md:top-auto`}>
+        {/* Mobile Menu Button */}
+        <div className="md:hidden text-2xl cursor-pointer relative z-20" onClick={toggleMenu}>
+          <i className={`fas ${menuOpen ? 'fa-times' : 'fa-bars'} text-gray-400`}></i>
+        </div>
+
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex md:items-center md:static bg-transparent w-auto">
           {navItems.map((item) => (
             <li key={item.id} className="md:inline-block md:mx-5 my-2 md:my-0">
               <button
@@ -63,9 +69,48 @@ const Header = ({ activeSection, scrollToSection }) => {
           ))}
         </ul>
 
-        <div className="md:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
-          <i className={`fas ${menuOpen ? 'fa-times' : 'fa-bars'} text-gray-400`}></i>
-        </div>
+        {/* Mobile Navigation Menu */}
+        <motion.div
+          className="md:hidden absolute top-full right-0 w-64 bg-black bg-opacity-95 backdrop-blur-md rounded-lg shadow-2xl overflow-hidden z-30"
+          initial={{ opacity: 0, scale: 0.95, y: -20 }}
+          animate={{
+            opacity: menuOpen ? 1 : 0,
+            scale: menuOpen ? 1 : 0.95,
+            y: menuOpen ? 0 : -20
+          }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
+          style={{ pointerEvents: menuOpen ? 'auto' : 'none' }}
+        >
+          <ul className="py-4">
+            {navItems.map((item, index) => (
+              <motion.li
+                key={item.id}
+                className="border-b border-gray-700 last:border-b-0"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{
+                  opacity: menuOpen ? 1 : 0,
+                  x: menuOpen ? 0 : 20
+                }}
+                transition={{ delay: index * 0.1, duration: 0.2 }}
+              >
+                <button
+                  onClick={() => {
+                    scrollToSection(item.id);
+                    closeMenu();
+                  }}
+                  className={`w-full text-left px-6 py-4 text-lg font-medium transition-all duration-300 hover:bg-gray-800 ${
+                    activeSection === item.id ? 'text-primary bg-gray-800' : 'text-gray-300 hover:text-primary'
+                  }`}
+                >
+                  {item.label}
+                  {activeSection === item.id && (
+                    <span className="block w-full h-0.5 bg-primary mt-1"></span>
+                  )}
+                </button>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
       </nav>
 
       <motion.div
