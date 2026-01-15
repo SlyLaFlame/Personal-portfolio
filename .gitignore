@@ -12,6 +12,12 @@ Thumbs.db
 # Ignore environment/config files
 .env
 
+# Ignore dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
 # Ignore build/dist folders (future-proofing)
 dist/
 build/
