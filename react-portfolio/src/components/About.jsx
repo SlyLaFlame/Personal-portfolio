@@ -11,19 +11,19 @@ const About = () => {
   ];
 
   const skills = [
-    { name: 'Web Design', description: 'Building clean and responsive websites' },
-    { name: 'HTML/CSS/JavaScript', description: 'Proficient in HTML5 and CSS3' },
-    { name: 'UI/UX Design', description: 'Creating user-friendly interfaces' },
+    { name: 'Web Development', description: 'Building clean and responsive websites' },
+    { name: 'Canva/Adobe Tools', description: 'Proficient in Canva and Adobe Creative Suite' },
+    { name: 'UI/UX Design/Figma', description: 'Creating user-friendly interfaces with Figma' },
     { name: 'Online presence for businesses', description: 'Ensuring businesses get the ultimate online presence' },
-    { name: 'Blogging', description: 'Ensuring SEO in web pages' },
+    { name: 'SEO Engineer', description: 'Ensuring SEO in web pages' },
     { name: 'Communication and Problem Solving', description: 'Excellent communication and problem solving skills' },
-    { name: 'Chess Instructor', description: 'Chess coaching sessions' }
+    
   ];
 
   const experience = [
-    { period: '2024 - Current', description: 'Consistently learning about tech and keeping up with AI' },
+    { period: '2026 - Current', description: 'ICT graduate trainee at ICT Authority, posted at Kenya Institute of Highways and Building Technology (KIHBT)' },
+    { period: '2024 - 2026', description: 'Freelance IT projects' },
     { period: '2021 - 2023', description: 'Managed chess tournament systems for Kenyan Universities, Nairobi region' },
-    { period: '2022 - 2023', description: 'Freelance IT projects' }
   ];
 
   const education = [

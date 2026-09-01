@@ -104,26 +104,6 @@ const Contact = () => {
 
             <div className="social-icons flex gap-6 mb-8">
               <motion.a
-                href="https://x.com/sirbery"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-3xl text-gray-400 hover:text-primary transition-colors duration-300"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaTwitter />
-              </motion.a>
-              <motion.a
-                href="https://www.instagram.com/laflame_aberi?igsh=a3RhaXRxOGt6OHc2"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-3xl text-gray-400 hover:text-primary transition-colors duration-300"
-                whileHover={{ scale: 1.2, y: -5 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaInstagram />
-              </motion.a>
-              <motion.a
                 href="https://www.linkedin.com/in/nyangate-shem-b94735374/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -136,8 +116,8 @@ const Contact = () => {
             </div>
 
             <motion.a
-              href="/Shem_Aberi_CV.pdf"
-              download="Shem_Aberi_CV.pdf"
+              href="/Shem_Nyanagate_CV.pdf"
+              download="Shem_Nyanagate_CV.pdf"
               className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-red-600 transition-all duration-300 shadow-lg"
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(255, 0, 79, 0.3)" }}
               whileTap={{ scale: 0.95 }}
@@ -256,7 +236,7 @@ const Contact = () => {
 
       {/* Footer */}
       <div className="text-center mt-16 pt-8 border-t border-gray-700">
-        <p className="text-gray-400">&copy; 2025 Shem Aberi. All rights reserved.</p>
+        <p className="text-gray-400">&copy; 2026 Shem Aberi. All rights reserved.</p>
         <p className="text-gray-500 text-sm mt-2">Designed by Aberi.</p>
       </div>
     </motion.section>

@@ -9,10 +9,10 @@ const Portfolio = () => {
     {
       id: 1,
       image: '/ChessFlame.png',
-      title: 'Web Design Project',
+      title: 'Web Development Project',
       description: 'A responsive chess tournament management website I designed for a local business.',
       link: 'https://github.com/SlyLaFlame/Take_Take',
-      category: 'Web Design'
+      category: 'Web Development'
     },
     {
       id: 2,
@@ -25,10 +25,10 @@ const Portfolio = () => {
     {
       id: 3,
       image: '/white.jpg',
-      title: 'Blogging',
-      description: 'Writing articles online for SEO-first companies with engaging content strategies.',
+      title: 'Poster Design with Canva and Adobe Tools',
+      description: 'Creating visually appealing posters for marketing and promotional purposes.',
       link: '#',
-      category: 'Content Creation'
+      category: 'Poster Design'
     }
   ];
 

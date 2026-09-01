@@ -6,20 +6,20 @@ const Services = () => {
   const services = [
     {
       icon: <FaCode className="text-4xl text-primary mb-4" />,
-      title: 'Web Design',
+      title: 'Web Development',
       description: 'I create impressive and responsive websites tailored to your needs.',
       link: '#'
     },
     {
       icon: <FaChessBoard className="text-4xl text-primary mb-4" />,
       title: 'UI/UX Design',
-      description: 'I build successful products that are aesthetically pleasing, usable, and enjoyable.',
+      description: 'I build products that are aesthetically pleasing, usable, and enjoyable.',
       link: '#'
     },
     {
       icon: <FaPen className="text-4xl text-primary mb-4" />,
-      title: 'Content Creation',
-      description: 'I produce engaging content for blogs and social media.',
+      title: 'Poster Design',
+      description: 'I create visually appealing posters for marketing and promotional purposes.',
       link: '#'
     }
   ];
