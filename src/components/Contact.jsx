@@ -116,8 +116,8 @@ const Contact = () => {
             </div>
 
             <motion.a
-              href="/Shem_Nyanagate_CV.pdf"
-              download="Shem_Nyanagate_CV.pdf"
+              href="/Shem_Nyangate_CV_Sep_2026.pdf"
+              download="Shem_Nyangate_CV_Sep_2026.pdf"
               className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-red-600 transition-all duration-300 shadow-lg"
               whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(255, 0, 79, 0.3)" }}
               whileTap={{ scale: 0.95 }}

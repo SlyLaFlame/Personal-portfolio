@@ -21,3 +21,5 @@ yarn-error.log*
 # Ignore build/dist folders (future-proofing)
 dist/
 build/
+#Ignore posters, too large, exceeding 100 MB limit on GitHub
+public/Posters.rar
