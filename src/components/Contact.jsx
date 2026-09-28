@@ -22,15 +22,32 @@ const Contact = () => {
   }, []);
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+  const { name, value } = e.target;
+
+  const fieldMap = {
+    Name: 'name',
+    Email: 'email',
+    Message: 'message'
   };
+
+  setFormData(prev => ({
+    ...prev,
+    [fieldMap[name]]: value
+  }));
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Honeypot check — if this hidden field has a value, a bot filled it in.
+    // Silently pretend success so bots don't learn to look for the field.
+    const honeypotValue = e.target.elements.website?.value;
+    if (honeypotValue) {
+      setStatus('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus(''), 5000);
+      return;
+    }
 
     try {
       const response = await fetch('https://script.google.com/macros/s/AKfycbycCnvKLYBlXgTlcRmoK4gb2uoVFN_eBQ5mrj0FT8gQcL9aZr_c6szcfadTFxrQhwcYlw/exec', {
@@ -141,6 +158,22 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="space-y-6"
             >
+              {/* Honeypot field — hidden from real visitors, bots fill it in. */}
+              <input
+                type="text"
+                name="Website"
+                tabIndex="-1"
+                autoComplete="off"
+                style={{
+                  position: 'absolute',
+                  left: '-9999px',
+                  width: '1px',
+                  height: '1px',
+                  opacity: 0
+                }}
+                aria-hidden="true"
+              />
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
