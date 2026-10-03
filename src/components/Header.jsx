@@ -33,7 +33,7 @@ const Header = ({ activeSection, scrollToSection }) => {
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      <nav className="relative z-10 flex justify-between items-center flex-wrap px-4 py-6 md:px-10">
+      <nav className="relative z-20 flex justify-between items-center flex-wrap px-4 py-6 md:px-10">
         <motion.img
           src="/IT guru.png"
           alt="logo"
@@ -71,7 +71,7 @@ const Header = ({ activeSection, scrollToSection }) => {
 
         {/* Mobile Navigation Menu */}
         <motion.div
-          className="md:hidden absolute top-full right-0 w-64 bg-black bg-opacity-95 backdrop-blur-md rounded-lg shadow-2xl overflow-hidden z-30"
+          className="md:hidden absolute top-full right-0 w-full bg-black bg-opacity-95 backdrop-blur-md rounded-lg shadow-2xl overflow-hidden z-30"
           initial={{ opacity: 0, scale: 0.95, y: -20 }}
           animate={{
             opacity: menuOpen ? 1 : 0,
@@ -114,7 +114,7 @@ const Header = ({ activeSection, scrollToSection }) => {
       </nav>
 
       <motion.div
-        className="relative z-10 flex flex-col justify-center items-center h-full text-center px-4"
+        className="relative z-0 flex flex-col justify-center items-center h-full text-center px-4"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.8 }}

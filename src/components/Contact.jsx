@@ -50,18 +50,20 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbycCnvKLYBlXgTlcRmoK4gb2uoVFN_eBQ5mrj0FT8gQcL9aZr_c6szcfadTFxrQhwcYlw/exec', {
+      // Apps Script web apps don't send CORS headers and redirect to
+      // googleusercontent.com to serve their response, which browsers
+      // block under normal fetch. no-cors sends the request through
+      // without letting us read the response — but the sheet still
+      // gets written, so we treat a non-throwing fetch as success.
+      await fetch('https://script.google.com/macros/s/AKfycbycCnvKLYBlXgTlcRmoK4gb2uoVFN_eBQ5mrj0FT8gQcL9aZr_c6szcfadTFxrQhwcYlw/exec', {
         method: 'POST',
+        mode: 'no-cors',
         body: new FormData(e.target)
       });
 
-      if (response.ok) {
-        setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setStatus(''), 5000);
-      } else {
-        setStatus('Failed to send message. Please try again.');
-      }
+      setStatus('Message sent successfully!');
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus(''), 5000);
     } catch (error) {
       setStatus('Error sending message. Please try again.');
       console.error('Error:', error);
@@ -158,7 +160,8 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="space-y-6"
             >
-              {/* Honeypot field — hidden from real visitors, bots fill it in. */}
+              {/* Honeypot field — hidden from real visitors, bots fill it in.
+                  Name it something other than a common autofill field. */}
               <input
                 type="text"
                 name="Website"

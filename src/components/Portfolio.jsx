@@ -25,10 +25,10 @@ const Portfolio = () => {
     {
       id: 3,
       image: '/white.jpg',
-      title: 'Poster Design with Canva and Adobe Tools',
+      title: 'Graphic Design with Canva and Adobe Tools',
       description: 'Creating visually appealing posters for marketing and promotional purposes.',
       link: '#',
-      category: 'Poster Design'
+      category: 'Graphic Design'
     }
   ];
 
